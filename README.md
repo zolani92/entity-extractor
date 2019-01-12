@@ -15,15 +15,15 @@ To run it next time:
 - Launch "node server" command. This will run your application on port 3000
 
 To perform an analysis:
-POST /analysis/analyze?apiKey=:DandelionApiKey
+- POST /analysis/analyze?apiKey=:DandelionApiKey
 ```json
 { 
 	"text": "London is the best city I have been in Europe!" 
 }
 ```
-Please note you should replace :DandelionApiKey with valid Dandelion Api Key
+- Please note you should replace :DandelionApiKey with valid Dandelion Api Key
 
-Example of response
+- Example of response
 ```json
 {
     "analysisId": 19,
@@ -42,5 +42,5 @@ Example of response
 ```
 
 To retrieve previously analysis:
-GET /analysis/:analysisId
-Please note you should replace :analysisId with previous analysis id returned through POST /analysis/analyze request
+- GET /analysis/:analysisId
+- Please note you should replace :analysisId with previous analysis id returned through POST /analysis/analyze request

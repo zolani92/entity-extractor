@@ -44,3 +44,11 @@ To perform an analysis:
 To retrieve previously analysis:
 - GET /analysis/:analysisId
 - Please note you should replace :analysisId with previous analysis id returned through POST /analysis/analyze request
+
+How to scale in public cloud?
+- Separate web layer from application layer. Add a web server as a reverse proxy to redirect to correct API (analyze API and retrieve API)
+- Horizontal scaling. Add load balancer between client and web layer, web layer and application layer
+- Master/Slave (read replicas) for each collection
+- Add a cache to avoid unnecessary calls to Dandelion API
+- Add a cache to cache analysis retrieval from database
+- Implement circuit breaker to break circuit in case Dandelion API

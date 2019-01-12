@@ -15,10 +15,11 @@ To run it next time:
  - Launch "node server" command
 
 To perform an analysis:
-POST http://localhost:3000/analysis/analyze?apiKey=<DANDELION API KEY>
+POST http://localhost:3000/analysis/analyze?apiKey=:DandelionApiKey
 {
 	"text": "London is the best city I have been in Europe!"
 }
+Please note you should replace :DandelionApiKey with valid Dandelion Api Key
 
 Example of response
 {
@@ -37,5 +38,5 @@ Example of response
 }
 
 To retrieve previously analysis:
-GET http://localhost:3000/analysis/<ANALYSIS ID>
-(where you replace <ANALYSIS ID> by previous analysis id returned through POST /analysis/analyze request)
+GET http://localhost:3000/analysis/:analysisId
+Please note you should replace :analysisId with previous analysis id returned through POST /analysis/analyze request

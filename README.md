@@ -16,12 +16,15 @@ To run it next time:
 
 To perform an analysis:
 POST http://localhost:3000/analysis/analyze?apiKey=:DandelionApiKey
-{
-	"text": "London is the best city I have been in Europe!"
+```json
+{ 
+	"text": "London is the best city I have been in Europe!" 
 }
+```
 Please note you should replace :DandelionApiKey with valid Dandelion Api Key
 
 Example of response
+```json
 {
     "analysisId": 19,
     "queryText": "London is the best city I have been in Europe!",
@@ -36,6 +39,7 @@ Example of response
         }
     ]
 }
+```
 
 To retrieve previously analysis:
 GET http://localhost:3000/analysis/:analysisId

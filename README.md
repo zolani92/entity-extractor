@@ -51,4 +51,4 @@ How to scale in public cloud?
 - Master/Slave (read replicas) for each collection
 - Add a cache to avoid unnecessary calls to Dandelion API
 - Add a cache to cache analysis retrieval from database
-- Implement circuit breaker to break circuit in case Dandelion API
+- Implement circuit breaker to break circuit in case Dandelion API fails down

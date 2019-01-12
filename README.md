@@ -6,16 +6,16 @@ To run it the first time:
 - Create a database entityExtractor
 - Create two collections:
     - analysis
-    - nextid
-        - Add a document with id:1
- - Launch "node server" command
+    - nextId
+        - Add a document with id: 1
+ - Launch "node server" command. This will run your application on port 3000
 
 To run it next time:
 - Run Mongodb on port 27017 by using "mongod" command
- - Launch "node server" command
+- Launch "node server" command. This will run your application on port 3000
 
 To perform an analysis:
-POST http://localhost:3000/analysis/analyze?apiKey=:DandelionApiKey
+POST /analysis/analyze?apiKey=:DandelionApiKey
 ```json
 { 
 	"text": "London is the best city I have been in Europe!" 
@@ -42,5 +42,5 @@ Example of response
 ```
 
 To retrieve previously analysis:
-GET http://localhost:3000/analysis/:analysisId
+GET /analysis/:analysisId
 Please note you should replace :analysisId with previous analysis id returned through POST /analysis/analyze request
